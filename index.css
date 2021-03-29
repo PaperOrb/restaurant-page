@@ -1,0 +1,98 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  height: 150px;
+  width: 100vw;
+  background-color: crimson;
+}
+
+.header-title {
+  color: wheat;
+  font-size: 48px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 50px;
+  width: 100%;
+  font-size: 22px;
+  color: wheat;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 250ms;
+}
+
+.tabs *:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tab-underline {
+  font-size: 33px;
+  text-decoration: underline;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.chef-img {
+  margin: 25px 0;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid gray;
+  height: 200px;
+  width: 200px;
+}
+
+.chef {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chef-text {
+  font-size: 22px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.author {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+}
