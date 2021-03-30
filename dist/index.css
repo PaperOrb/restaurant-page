@@ -55,7 +55,7 @@ body {
   text-decoration: underline;
 }
 
-.tab-underline {
+.highlight-nav-item {
   font-size: 33px;
   text-decoration: underline;
 }
@@ -85,6 +85,8 @@ body {
 
 .chef-text {
   font-size: 22px;
+  width: 50%;
+  text-align: center;
 }
 
 /* menu */

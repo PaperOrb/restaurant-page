@@ -4,8 +4,10 @@ const body = document.querySelector("body");
 
 pageLoad.header();
 pageLoad.nav();
-pageLoad.home();
 const nav = document.querySelector(".tabs");
+const navTabs = document.querySelectorAll(".nav-item");
+
+pageLoad.home();
 
 function removePreviousHTML() {
   const eleToRemove = body.querySelector(".home") || body.querySelector(".menu") || body.querySelector(".contact");
@@ -13,8 +15,17 @@ function removePreviousHTML() {
   body.querySelector(".footer").remove();
 }
 
+function resetNavTabs() {
+  navTabs.forEach(element => {
+    if (element.classList.contains("highlight-nav-item")) {
+      element.classList.remove("highlight-nav-item");
+    };
+  });
+};
+
 nav.addEventListener("click", function (e) {
   removePreviousHTML();
+  resetNavTabs();
 
   if (e.target.classList.contains("home-tab")) {
     pageLoad.home();

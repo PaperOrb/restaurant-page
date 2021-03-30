@@ -7,7 +7,7 @@ let pageLoad = (function () {
 
     const headerTitle = document.createElement("div");
     headerTitle.classList.add("header-title");
-    headerTitle.textContent = "Crimson Wheat";
+    headerTitle.textContent = "Krusty Krab";
     body.append(header);
     header.append(headerTitle);
   }
@@ -20,9 +20,9 @@ let pageLoad = (function () {
     const button2 = document.createElement("button");
     const button3 = document.createElement("button");
 
-    button1.classList.add("home-tab");
-    button2.classList.add("menu-tab");
-    button3.classList.add("contact-tab");
+    button1.classList.add("home-tab", "nav-item");
+    button2.classList.add("menu-tab", "nav-item");
+    button3.classList.add("contact-tab", "nav-item");
 
     button1.textContent = "Home";
     button2.textContent = "Menu";
@@ -41,17 +41,18 @@ let pageLoad = (function () {
 
     const chefImg = document.createElement("img");
     chefImg.classList.add("chef-img");
-    chefImg.src = "./images/italian-chef-720.jpg";
+    chefImg.src = "./images/Mr._krabs_spongebob_squarepants.png";
 
     const chefText = document.createElement("div");
     chefText.classList.add("chef-text");
     chefText.textContent =
-      "Only the finest burgers with real sea cheese! Come on down and see why The Krusty Krab is the most popular restaurant in Bikini Bottom!";
+      "Only the finest krabby patties with real sea cheese! Come on down and see why The Krusty Krab is the most popular restaurant in Bikini Bottom!";
 
     body.append(home);
     home.append(chef);
     chef.append(chefImg);
     chef.append(chefText);
+    document.querySelector('.home-tab').classList.add("highlight-nav-item");
   }
 
   function menu() {
@@ -59,6 +60,7 @@ let pageLoad = (function () {
     menu.classList.add("menu");
 
     body.append(menu);
+    document.querySelector('.menu-tab').classList.add("highlight-nav-item");
   }
 
   function contact() {
@@ -102,6 +104,7 @@ let pageLoad = (function () {
     contact.append(email);
     email.append(emailH1);
     email.append(emailAddress);
+    document.querySelector('.contact-tab').classList.add("highlight-nav-item");
   }
 
   function addMenuItem(imagePath, nameStr, priceStr, descriptionStr) {
@@ -142,8 +145,6 @@ let pageLoad = (function () {
     // menuItemDescription.append();
   }
 
-  function contact() {}
-
   function footer() {
     const footer = document.createElement("section");
     footer.classList.add("footer");
@@ -156,7 +157,7 @@ let pageLoad = (function () {
     footer.append(author);
   }
 
-    return { header, home, nav, menu, addMenuItem, contact, footer };
+  return { header, home, nav, menu, addMenuItem, contact, footer };
 })();
 
 export { pageLoad };
